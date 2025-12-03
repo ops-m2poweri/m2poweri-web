@@ -1,20 +1,43 @@
 {
   "home": {
     "hero": {
-      "badge": "PoC headless in 5 giorni",
-      "title": "Modernizziamo il tuo B2C/B2B",
-      "highlight": "senza replatforming",
-      "description": "M2Poweri ti aiuta a portare performance, UX moderna e nuove funzionalità ai siti esistenti: presenza online B2C, PoC headless per B2B/B2C e web app custom, anche in white-label per web agency.",
+      "badge": "Landing, PoC e web app leggere",
+      "title": "Progettiamo landing leggere, PoC e web app",
+      "highlight": "sopra lo stack che hai già",
+      "description": "M2Poweri aiuta brand e agenzie a spedire veloce: landing singole o piccoli siti da 3–4 pagine, PoC headless e web app custom costruite sopra ciò che esiste già, anche in white-label per web agency.",
       "primaryCta": "Prenota una call",
       "secondaryCta": "Scopri la Headless PoC",
-      "bulletB2CPresence": "Presenza online B2C",
-      "bulletMigration": "Migrazione e ristrutturazione",
+      "bulletB2CPresence": "Landing e micro-siti B2C",
+      "bulletMigration": "PoC headless per brand e agenzie",
       "bulletCustomApps": "Web app custom B2B/B2C",
       "mockupTitle": "M2Poweri headless PoC",
       "mockupVitals": "Core Web Vitals",
       "metricLcp": "LCP",
       "metricCls": "CLS",
-      "metricConversion": "Conversion uplift"
+      "metricConversion": "Conversion uplift",
+      "carousel": {
+        "poc": {
+          "label": "PoC headless",
+          "title": "Validiamo feature complesse senza replatforming.",
+          "body": "Una PoC in 5 giorni per mostrare a stakeholder e clienti come potrebbero apparire e funzionare le nuove feature, usando stack moderno ma agganciato ai sistemi esistenti."
+        },
+        "b2c": {
+          "label": "Landing B2C",
+          "title": "Micro-siti e funnel pensati per convertire, non solo per essere belli.",
+          "body": "Landing page e piccoli siti da 3–4 pagine che collegano SEO e adv a lead, demo e vendite, con performance e UX moderne."
+        },
+        "custom": {
+          "label": "Web app custom",
+          "title": "Applicazioni su misura, pronte per essere clonate su più clienti.",
+          "body": "Design e architettura pensati per riutilizzare funzionalità, moduli e flussi tra progetti diversi, mantenendo tempi e costi sotto controllo."
+        }
+      },
+      "miniStat": {
+        "leadTimeLabel": "Tempo medio",
+        "leadTimeValue": "5–10 giorni per vedere qualcosa live",
+        "collabLabel": "Modalità",
+        "collabValue": "Diretto con il cliente o in white-label con agenzia"
+      }
     },
     "clients": {
       "title": "Stack moderno per PoC headless e web app B2B/B2C."

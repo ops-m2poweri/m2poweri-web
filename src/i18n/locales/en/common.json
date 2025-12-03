@@ -1,20 +1,43 @@
 {
   "home": {
     "hero": {
-      "badge": "Headless PoC in 5 days",
-      "title": "We modernize your B2C/B2B",
-      "highlight": "without replatforming",
-      "description": "M2Poweri helps you bring performance, modern UX and new features to existing sites: B2C online presence, headless PoC for B2B/B2C and custom web apps, also white-label for web agencies.",
+      "badge": "Lean landing pages, PoCs and web apps",
+      "title": "We design and build lean landing pages, PoCs and web apps",
+      "highlight": "on top of your existing stack",
+      "description": "M2Poweri helps brands and agencies ship fast: single landing pages or small 3–4 page sites, headless PoCs and custom web apps built on top of what you already have, also available white-label for digital agencies.",
       "primaryCta": "Book a call",
       "secondaryCta": "Learn about the Headless PoC",
-      "bulletB2CPresence": "B2C online presence",
-      "bulletMigration": "Migration and restructuring",
+      "bulletB2CPresence": "B2C landing pages & micro-sites",
+      "bulletMigration": "Headless PoCs for brands & agencies",
       "bulletCustomApps": "Custom B2B/B2C web apps",
       "mockupTitle": "M2Poweri headless PoC",
       "mockupVitals": "Core Web Vitals",
       "metricLcp": "LCP",
       "metricCls": "CLS",
-      "metricConversion": "Conversion uplift"
+      "metricConversion": "Conversion uplift",
+      "carousel": {
+        "poc": {
+          "label": "Headless PoC",
+          "title": "We validate complex features without a full replatform.",
+          "body": "A 5-day PoC to show stakeholders and clients how new features could look and behave, using a modern stack while staying connected to existing systems."
+        },
+        "b2c": {
+          "label": "B2C landing pages",
+          "title": "Small sites and funnels built to convert, not just to look nice.",
+          "body": "Single landing pages or small 3–4 page sites that connect SEO and ads to leads, demos and sales, with performance and UX aligned to modern standards."
+        },
+        "custom": {
+          "label": "Custom web apps",
+          "title": "Tailor-made apps ready to be cloned across clients.",
+          "body": "Design and architecture crafted to reuse features, modules and flows across different projects, keeping time-to-market and costs under control."
+        }
+      },
+      "miniStat": {
+        "leadTimeLabel": "Average lead time",
+        "leadTimeValue": "5–10 days to see something live",
+        "collabLabel": "Collaboration mode",
+        "collabValue": "Direct with the client or white-label with agencies"
+      }
     },
     "clients": {
       "title": "Modern stack for headless PoC and B2B/B2C web apps."

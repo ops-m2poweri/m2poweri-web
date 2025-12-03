@@ -27,7 +27,7 @@ export function SiteFooter() {
               <Image
                 src="/brand/m2poweri-logo-esteso-bianco-schermi.png"
                 alt={t("footer.logoAlt")}
-                width={150}
+                width={200}
                 height={32}
               />
             </div>

@@ -29,14 +29,11 @@ export function SiteHeader() {
             <Image
               src="/brand/m2poweri-logo-esteso-colori-schermi.png"
               alt={t("header.logoAlt")}
-              width={150}
+              width={200}
               height={32}
               priority
             />
           </div>
-          <span className="hidden text-[11px] font-medium uppercase tracking-[0.16em] text-neutral-400 sm:inline">
-            {t("header.tagline")}
-          </span>
         </Link>
 
         {/* Desktop nav */}
