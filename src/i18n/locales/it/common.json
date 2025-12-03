@@ -1,0 +1,112 @@
+{
+  "home": {
+    "hero": {
+      "badge": "PoC headless in 5 giorni",
+      "title": "Modernizziamo il tuo B2C/B2B",
+      "highlight": "senza replatforming",
+      "description": "M2Poweri ti aiuta a portare performance, UX moderna e nuove funzionalità ai siti esistenti: presenza online B2C, PoC headless per B2B/B2C e web app custom, anche in white-label per web agency.",
+      "primaryCta": "Prenota una call",
+      "secondaryCta": "Scopri la Headless PoC",
+      "bulletB2CPresence": "Presenza online B2C",
+      "bulletMigration": "Migrazione e ristrutturazione",
+      "bulletCustomApps": "Web app custom B2B/B2C",
+      "mockupTitle": "M2Poweri headless PoC",
+      "mockupVitals": "Core Web Vitals",
+      "metricLcp": "LCP",
+      "metricCls": "CLS",
+      "metricConversion": "Conversion uplift"
+    },
+    "clients": {
+      "title": "Stack moderno per PoC headless e web app B2B/B2C."
+    },
+    "services": {
+      "eyebrow": "Cosa facciamo",
+      "title": "Dai PoC veloci alle web app complete.",
+      "description": "Lavoriamo con brand, aziende e agenzie per portare feature moderne su stack esistenti, senza fermare il business.",
+      "cardCta": "Scopri di più",
+      "cards": {
+        "presence": {
+          "tag": "B2C",
+          "title": "Presenza online B2C",
+          "description": "Siti vetrina, funnel e micro-portali per portare traffico qualificato al tuo business."
+        },
+        "migration": {
+          "tag": "PoC headless",
+          "title": "Migrazione & ristrutturazione B2C/B2B",
+          "description": "Headless PoC in 5 giorni per validare nuove feature senza replatforming completo."
+        },
+        "custom": {
+          "tag": "Custom app",
+          "title": "Web app custom B2B/B2C",
+          "description": "Applicazioni su misura, pensate per clonare e riutilizzare logiche tra più clienti."
+        }
+      }
+    },
+    "poc": {
+      "eyebrow": "Headless PoC",
+      "title": "Modern feature in 5 giorni, senza replatforming.",
+      "description": "Una sprint pensata per agenzie e team digital che vogliono vedere risultati reali prima di impegnare budget importanti.",
+      "steps": {
+        "kickoff": {
+          "label": "Day 0",
+          "title": "Kickoff",
+          "description": "Allineamento su obiettivi, scope, accessi a repo e KPI di successo."
+        },
+        "build": {
+          "label": "Day 1–4",
+          "title": "Build",
+          "description": "Sviluppo componenti headless e BFF/API in React/NestJS o Python."
+        },
+        "handover": {
+          "label": "Day 5",
+          "title": "Demo & handover",
+          "description": "Demo, report su performance e consegna dei repo con Loom di walkthrough."
+        }
+      }
+    },
+    "highlights": {
+      "pocTime": {
+        "label": "Tempo PoC",
+        "value": "5 giorni",
+        "detail": "Dallo scope alla demo."
+      },
+      "approach": {
+        "label": "Approccio",
+        "value": "Headless",
+        "detail": "API-first, BFF e UI moderna."
+      },
+      "target": {
+        "label": "Per chi",
+        "value": "Brand & agenzie",
+        "detail": "B2C, B2B e white-label."
+      }
+    },
+    "cta": {
+      "eyebrow": "Parliamo del tuo progetto",
+      "title": "Vediamo se una PoC o una web app custom è la scelta giusta.",
+      "description": "Nessun lock-in, nessun replatform forzato: solo feature moderne costruite sopra ciò che già funziona.",
+      "button": "Prenota una call"
+    }
+  },
+  "header": {
+    "logoAlt": "Logo M2Poweri",
+    "tagline": "Modern web. Headless PoC. Web app B2B/B2C.",
+    "nav": {
+      "services": "Servizi",
+      "poc": "Headless PoC",
+      "agency": "Web Agency",
+      "contacts": "Contatti"
+    },
+    "cta": "Prenota una call"
+  },
+  "footer": {
+    "rights": "© {{year}} M2Poweri. Tutti i diritti riservati.",
+    "tagline": "Modern web, headless PoC e web app B2B/B2C.",
+    "logoAlt": "Logo M2Poweri in bianco",
+    "description": "Partner tecnico per brand, aziende e agenzie che vogliono portare feature moderne su stack esistenti, senza replatforming forzato.",
+    "menu": "Mappa sito",
+    "contacts": "Contatti",
+    "contactLine": "Parliamo di PoC headless, migrazioni e web app su misura.",
+    "whatsappLabel": "Scrivici su WhatsApp"
+  }
+}
