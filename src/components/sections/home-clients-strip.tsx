@@ -38,7 +38,7 @@ export function HomeClientsStrip() {
   const { t } = useTranslation("common");
 
   return (
-    <section className="border-b bg-neutral-950/60 backdrop-blur-sm">
+    <section className="border-b bg-neutral-950/60 text-neutral-300">
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-xs text-neutral-300 md:px-6">
         <div className="relative w-full">
           <Marquee
