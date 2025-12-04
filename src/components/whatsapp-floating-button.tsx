@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "i18next";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppFloatingButton() {
@@ -20,7 +21,7 @@ export function WhatsAppFloatingButton() {
       <div className="group flex items-center gap-3">
         {/* label che appare solo su desktop */}
         <span className="hidden rounded-full bg-slate-950/80 px-3 py-1 text-xs text-slate-100 shadow-lg backdrop-blur md:inline group-hover:bg-slate-950">
-          Chatta con noi
+          {t("extra.whatsappLabel")}
         </span>
 
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 shadow-xl ring-2 ring-emerald-300/60 transition-all hover:scale-105 hover:bg-emerald-400">

@@ -131,5 +131,257 @@
     "contacts": "Contatti",
     "contactLine": "Parliamo di PoC headless, migrazioni e web app su misura.",
     "whatsappLabel": "Scrivici su WhatsApp"
+  },
+  "extra": {
+    "whatsappLabel": "Chatta con noi"
+  },
+  "headlessPoc": {
+    "hero": {
+      "badge": "Headless PoC in 5 giorni",
+      "titlePrefix": "Prova il tuo",
+      "titleHighlight": "stack headless",
+      "titleSuffix": "senza replatforming.",
+      "description": "Selezioniamo una parte del tuo sito (B2C o B2B), la ricostruiamo con Next.js, API/BFF e headless CMS, e ti consegniamo una PoC cliccabile da mostrare a board, marketing e IT — in 5 giorni.",
+      "primaryCta": "Book a call",
+      "secondaryCta": "Parla con noi",
+      "bullet1": "Nessun rischio sul sito esistente",
+      "bullet2": "Demo reale, non solo slide",
+      "bullet3": "Pronta per essere messa in produzione"
+    },
+    "metrics": {
+      "coreVitalsLabel": "Core Web Vitals",
+      "exampleLabel": "Esempio PoC M2Poweri",
+      "lcpLabel": "LCP",
+      "clsLabel": "CLS",
+      "upliftLabel": "Conversion uplift",
+      "timelineLabel": "Timeline",
+      "timelineValue": "PoC in 5 giorni lavorativi",
+      "impactLabel": "Impatto",
+      "impactValue": "Performance, UX, tracking già pronti"
+    },
+    "whatIs": {
+      "title": "Cos'è una Headless PoC?",
+      "body1": "È una prova concreta del tuo sito o applicazione in modalità headless, costruita su una porzione reale del tuo dominio (es. landing prodotto, category page, area clienti). Lavoriamo sopra l'esistente: nessun replatforming completo, nessun big bang.",
+      "body2": "L'obiettivo è permettere a business, design e IT di vedere e toccare con mano: performance, UX ed integrazioni con i sistemi attuali.",
+      "pillMarketingTitle": "Per team digital / marketing",
+      "pillMarketingBody": "Validare una nuova UX su una parte del sito prima di investire nel redesign completo.",
+      "pillItTitle": "Per IT / architetture",
+      "pillItBody": "Testare stack headless, BFF e integrazioni senza toccare l'intero monolite.",
+      "whenTitle": "Quando ha senso farla?",
+      "whenItem1": "Vuoi modernizzare il front-end ma il replatforming totale è troppo rischioso o costoso.",
+      "whenItem2": "Devi convincere stakeholder interni con qualcosa di concreto, non solo slide e documenti.",
+      "whenItem3": "Vuoi una base riutilizzabile come primo step verso la nuova architettura."
+    },
+    "timeline": {
+      "title": "Come funziona: PoC in 5 giorni",
+      "subtitle": "Processo snello, pensato per ridurre al minimo il tempo richiesto al tuo team e massimizzare il valore della demo.",
+      "note": "Tempi indicativi su PoC standard; adattiamo il perimetro al tuo contesto.",
+      "stepLabel": "Step",
+      "steps": {
+        "1": {
+          "title": "Kickoff & scope",
+          "body": "Allineamento obiettivi, scelta della pagina o feature da portare in headless, definizione delle integrazioni minime."
+        },
+        "2": {
+          "title": "Design & UX",
+          "body": "Proposta UI basata sul tuo brand esistente, con ottimizzazioni per conversione e performance."
+        },
+        "3": {
+          "title": "Build & integrazioni",
+          "body": "Sviluppo Next.js, collegamento a API / BFF / CMS headless, setup tracking e Core Web Vitals."
+        },
+        "4": {
+          "title": "Demo & next step",
+          "body": "Demo guidata, raccolta feedback, discussione su roll-out e possibile messa in produzione."
+        }
+      }
+    },
+    "architecture": {
+      "title": "Una architettura moderna, sopra l'esistente",
+      "body": "Usiamo un approccio BFF (Backend For Frontend) e/o headless CMS per collegare il nuovo front-end al tuo stack attuale, mantenendo la PoC isolata ma pronta a crescere.",
+      "schemaTitle": "Schema semplificato",
+      "boxNewFrontendTitle": "Nuovo front-end",
+      "boxNewFrontendBody": "Next.js / React, UI ottimizzata per Core Web Vitals, routing moderno, integrazione analytics.",
+      "bffLabel": "BFF / API layer",
+      "boxCmsTitle": "Headless CMS / dati",
+      "boxCmsBody": "Gestione contenuti, copy, immagini e configurazioni della PoC.",
+      "boxLegacyTitle": "Sistemi esistenti",
+      "boxLegacyBody": "Monolite, e-commerce, CRM, ERP, servizi interni. La PoC parla con loro tramite API o proxy.",
+      "afterPocTitle": "Cosa succede dopo la PoC?",
+      "afterPocBody": "La PoC non è un prototipo usa e getta: può essere il primo pezzo della nuova architettura, da estendere a più pagine o flussi.",
+      "afterPocItem1": "Possibile promozione in produzione con pochi adattamenti.",
+      "afterPocItem2": "Roadmap graduale: da una PoC a un rollout continuo.",
+      "afterPocItem3": "Documentazione tecnica per il tuo team o partner."
+    },
+    "useCases": {
+      "title": "Use case tipici",
+      "subtitle": "La Headless PoC funziona bene sia in contesti B2C che B2B, e anche come strumento per agenzie che vogliono vendere progetti moderni ai propri clienti.",
+      "b2c": {
+        "title": "B2C – Landing / funnel",
+        "body": "Rifacciamo una landing prodotto, category page o mini funnel in headless: prestazioni, tracciamento e sperimentazione UX.",
+        "point1": "Test A/B più semplici",
+        "point2": "Integrazione con sistemi marketing",
+        "point3": "Base per rollout progressivo"
+      },
+      "b2b": {
+        "title": "B2B – Area clienti / portale",
+        "body": "Una sezione dell’area riservata o portale partner, con UI moderna e migliore usabilità dei dati.",
+        "point1": "Migliore UX per funzioni critiche",
+        "point2": "API/BFF per orchestrare diverse fonti dati",
+        "point3": "Prova di integrazione con SSO / identity"
+      },
+      "agency": {
+        "title": "Web agency – PoC per clienti",
+        "body": "Una PoC white-label da presentare ai tuoi clienti enterprise, per sbloccare budget di modernizzazione.",
+        "point1": "Materiale concreto per offerte",
+        "point2": "Riduci il rischio percepito dal cliente",
+        "point3": "M2Poweri come partner tecnico dietro le quinte"
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "q1": "Rischia di rompere qualcosa sul sito attuale?",
+      "a1": "No: scegliamo una porzione isolata (es. sottodominio, percorso dedicato) e ci integriamo in lettura con i tuoi sistemi. Nessun deploy rischioso sul monolite.",
+      "q2": "Quanto deve essere coinvolto il nostro team?",
+      "a2": "Organizziamo la PoC per richiedere il minimo tempo possibile: tipicamente un kickoff congiunto e alcuni check tecnici per accessi e API.",
+      "q3": "La PoC può andare in produzione?",
+      "a3": "Sì, se concordiamo i criteri iniziali: sviluppiamo già con qualità da produzione, così puoi decidere se promuoverla con poche modifiche.",
+      "q4": "Possiamo usare le vostre best practice internamente?",
+      "a4": "Certo: possiamo fare handover completo al tuo team o continuare a supportarti come partner tecnico."
+    },
+    "cta": {
+      "title": "Vuoi capire se una PoC può funzionare nel tuo contesto?",
+      "body": "In 30 minuti analizziamo insieme il tuo scenario (B2C, B2B o agenzia), identifichiamo una buona candidate page e ti suggeriamo il perimetro ideale per una PoC concreta.",
+      "primaryCta": "Book a call",
+      "secondaryCta": "Guarda tutti i servizi"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Parliamo del tuo progetto",
+      "title": "Contatta M2Poweri",
+      "subtitle": "Che tu stia valutando una Headless PoC, una nuova web app B2B/B2C o un supporto per il tuo team, possiamo aiutarti a definire il prossimo passo concreto.",
+      "primaryCta": "Book a call",
+      "secondaryCta": "Scrivici una mail"
+    },
+    "info": {
+      "title": "Informazioni di contatto",
+      "description": "Preferisci un contatto diretto? Usa email o telefono, oppure inviaci i dettagli dal form e ti rispondiamo il prima possibile.",
+      "emailLabel": "Email",
+      "phoneLabel": "Telefono",
+      "hoursValue": "Lun–Ven, 9:00–18:00 (CET)",
+      "companyLabel": "Studio",
+      "companyValue": "M2Poweri LTD",
+      "legalNote": "M2Poweri è una realtà distribuita: lavoriamo con clienti e partner in Europa, UK e oltre. I dettagli legali completi vengono condivisi in fase di proposta/contratto."
+    },
+    "form": {
+      "title": "Mandaci un messaggio",
+      "subtitle": "Dicci in poche righe cosa vuoi ottenere: faremo una prima valutazione e ti proporremo il modo migliore per partire.",
+      "fieldName": "Nome e cognome",
+      "fieldCompany": "Azienda",
+      "fieldEmail": "Email",
+      "fieldType": "Che tipo di richiesta?",
+      "fieldTypeOptionGeneral": "Informazioni generali",
+      "fieldTypeOptionProject": "Nuovo progetto / PoC",
+      "fieldTypeOptionAgency": "Collaborazione con agenzia",
+      "fieldMessage": "Messaggio",
+      "submit": "Invia richiesta",
+      "altCalendly": "Oppure prenota subito una call Calendly",
+      "disclaimer": "Compilando il form accetti che i dati vengano utilizzati per rispondere alla tua richiesta. Non ti invieremo newsletter o comunicazioni di marketing senza il tuo consenso esplicito.",
+      "success": "Richiesta inviata, ti risponderemo al più presto.",
+      "error": "Si è verificato un errore durante l'invio. Riprova tra qualche minuto.",
+      "submitting": "Invio in corso…"
+    }
+  },
+  "services": {
+    "hero": {
+      "badge": "Servizi",
+      "title": "Tre modi per modernizzare il tuo digitale",
+      "subtitle": "Presenza online B2C, PoC headless per B2C/B2B e web app custom: scegli il livello di intervento che ha più senso per il tuo business.",
+      "primaryCta": "Prenota una call",
+      "secondaryCta": "Scopri la Headless PoC",
+      "sideTitle": "Cosa puoi ottenere",
+      "sideItems": [
+        "Performance e UX moderne senza replatforming totale",
+        "Prototipi rapidi per validare prima di investire",
+        "Applicazioni custom integrate nel tuo ecosistema"
+      ]
+    },
+    "list": {
+      "title": "I nostri servizi",
+      "subtitle": "Dalla presenza online alla ristrutturazione headless fino alle web app su misura.",
+      "cta": "Scopri i dettagli"
+    },
+    "cards": {
+      "b2c": {
+        "label": "Presenza B2C",
+        "title": "Presenza online B2C",
+        "description": "Siti vetrina, landing page e funnel pensati per portare contatti e vendite, con performance e UX moderne.",
+        "tags": ["Local business", "Freelance", "Brand B2C"]
+      },
+      "poc": {
+        "label": "Headless PoC",
+        "title": "Migrazione e ristrutturazione B2C/B2B",
+        "description": "PoC headless in 5 giorni per testare nuove funzionalità e migliorare le Core Web Vitals senza replatforming completo.",
+        "tags": ["PoC 5 giorni", "Headless", "Core Web Vitals"]
+      },
+      "apps": {
+        "label": "Web app custom",
+        "title": "Applicazioni web custom B2B/B2C",
+        "description": "Portali, dashboard e web app multi-tenant basate su stack moderno, API-first e integrazione con i tuoi sistemi.",
+        "tags": ["B2B", "Multi-tenant", "API-first"]
+      }
+    },
+    "final": {
+      "title": "Non sei sicuro da dove iniziare?",
+      "subtitle": "Possiamo aiutarti a capire se ti serve una semplice presenza online, una PoC headless o una web app custom.",
+      "cta": "Parla con noi"
+    }
+  },
+  "webAgency": {
+    "hero": {
+      "badge": "Partnership per web agency",
+      "title": "Modernizza l’offerta della tua agenzia con PoC",
+      "highlight": "white-label",
+      "body": "Ti aiutiamo a chiudere progetti complessi con demo reali, UX moderne e architetture headless pronte da mostrare ai tuoi clienti. Rimaniamo dietro le quinte: il valore rimane tuo.",
+      "primaryCta": "Book a partnership call",
+      "secondaryCta": "Parla con noi"
+    },
+    "benefits": {
+      "title": "Perché collaborare con M2Poweri",
+      "intro": "Sblocca progetti moderni senza assumere nuovo personale tecnico. Ti diamo velocità, credibilità e demo perfette per la fase vendita.",
+      "whiteLabel": {
+        "title": "Delivery white-label",
+        "body": "Lavoriamo dietro le quinte: tu presenti la PoC al cliente, noi la realizziamo con il tuo brand in evidenza."
+      },
+      "presales": {
+        "title": "Supporto prevendita",
+        "body": "Aiutiamo il tuo team a preparare proposte tecniche, stime, demo e materiali da presentare in riunione."
+      },
+      "modernProjects": {
+        "title": "Progetti moderni",
+        "body": "Next.js, API/BFF, headless CMS, performance e Core Web Vitals: porti ai clienti ciò che si aspettano da uno stack moderno."
+      }
+    },
+    "services": {
+      "title": "Cosa puoi offrire ai tuoi clienti (con noi dietro le quinte)",
+      "service1": {
+        "title": "PoC headless su singola pagina",
+        "body": "Perfetta per pitch, gare e redesign: rifacciamo una landing, category o area chiave in modalità headless."
+      },
+      "service2": {
+        "title": "Modernizzazione front-end",
+        "body": "Aggiorniamo una parte del sito del tuo cliente senza replatforming completo, riducendo rischi e tempi."
+      },
+      "service3": {
+        "title": "Web app e portali B2B/B2C",
+        "body": "Aree clienti, portali partner, dashboard e strumenti interni con UX moderna, API e integrazioni esistenti."
+      }
+    },
+    "cta": {
+      "title": "Vuoi far crescere il valore delle tue proposte?",
+      "body": "In una call di 30 minuti analizziamo il tuo modello di vendita e ti suggeriamo come usare PoC e modernizzazione per chiudere clienti enterprise.",
+      "primaryCta": "Book a partnership call"
+    }
   }
 }

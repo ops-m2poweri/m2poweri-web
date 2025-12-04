@@ -40,7 +40,7 @@ export function SiteFooter() {
               {t("footer.menu")}
             </h3>
             <div className="mt-3 flex flex-col gap-2 text-sm">
-              <Link href="/servizi" className="hover:text-brand-blue">
+              <Link href="/services" className="hover:text-brand-blue">
                 {t("header.nav.services")}
               </Link>
               <Link href="/headless-poc" className="hover:text-brand-blue">
@@ -49,7 +49,7 @@ export function SiteFooter() {
               <Link href="/web-agency" className="hover:text-brand-blue">
                 {t("header.nav.agency")}
               </Link>
-              <Link href="/contatti" className="hover:text-brand-blue">
+              <Link href="/contacts" className="hover:text-brand-blue">
                 {t("header.nav.contacts")}
               </Link>
             </div>

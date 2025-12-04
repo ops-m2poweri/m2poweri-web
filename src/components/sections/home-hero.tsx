@@ -14,6 +14,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 type SlideId = "poc" | "b2c" | "custom";
 
@@ -195,11 +196,18 @@ export function HomeHero() {
               whileHover={!prefersReducedMotion ? { y: -1 } : undefined}
             >
               <Button
+                asChild
                 size="lg"
-                className="bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
+                className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
               >
-                {t("home.hero.primaryCta")}
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Link
+                  href="https://calendly.com/m2poweri25/30min" // <-- metti il tuo link
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("home.hero.primaryCta")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </motion.div>
 
@@ -209,9 +217,9 @@ export function HomeHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-brand-blue/50 text-brand-blue hover:bg-brand-blue/10"
+                className="border-brand-blue/50 text-brand-blue hover:bg-brand-blue/10 hover:text-slate-50"
               >
-                {t("home.hero.secondaryCta")}
+                <Link href="/headless-poc">{t("home.hero.secondaryCta")}</Link>
               </Button>
             </motion.div>
           </motion.div>
@@ -245,7 +253,7 @@ export function HomeHero() {
         >
           {/* LOGO / PITTOGRAMMA SOSPESO */}
           <motion.div
-            className="pointer-events-none absolute -top-10 right-6 z-20 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-900/90 shadow-xl shadow-brand-blue/30 ring-1 ring-brand-blue/60 backdrop-blur"
+            className="pointer-events-none absolute -top-10 right-6 z-20"
             animate={
               prefersReducedMotion
                 ? undefined
@@ -260,28 +268,13 @@ export function HomeHero() {
                 : { duration: 9, repeat: Infinity, ease: "easeInOut" }
             }
           >
-            {/* glow dietro */}
-            {!prefersReducedMotion && (
-              <motion.div
-                className="absolute inset-0 rounded-2xl bg-brand-blue/20 blur-xl"
-                initial={{ opacity: 0.7 }}
-                animate={{ opacity: [0.6, 1, 0.6] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            )}
-            <div className="relative z-10 flex items-center justify-center">
-              <Image
-                src="/brand/m2poweri-pittogramma-bianco-schermi.png" // <--- cambia path se il file ha altro nome
-                alt="M2Poweri logo glyph"
-                width={40}
-                height={40}
-                className="h-9 w-auto"
-              />
-            </div>
+            <Image
+              src="/brand/m2poweri-pittogramma-colori-schermi.svg" // cambia path se diverso
+              alt="M2Poweri logo glyph"
+              width={40}
+              height={40}
+              className="h-10 w-auto drop-shadow-[0_0_18px_rgba(0,202,255,0.45)]"
+            />
           </motion.div>
 
           <div className="relative overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/80 backdrop-blur">

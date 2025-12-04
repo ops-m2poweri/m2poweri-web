@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HomeCtaBand() {
   const { t } = useTranslation("common");
@@ -34,11 +35,18 @@ export function HomeCtaBand() {
           </div>
 
           <Button
+            asChild
             size="lg"
             className="mt-2 bg-black/80 text-white hover:bg-black"
           >
-            {t("home.cta.button")}
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <Link
+              href="https://calendly.com/m2poweri25/30min"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("home.cta.button")}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </motion.div>
       </div>
