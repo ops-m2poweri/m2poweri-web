@@ -9,16 +9,15 @@ type Props = {
   className?: string;
 };
 
+const FALLBACK_CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
+
+const CALENDLY_URL =
+  process.env.NEXT_PUBLIC_CALENDLY_URL ?? FALLBACK_CALENDLY_URL;
+
 export function BookCallButton({ label, className }: Props) {
   return (
     <Button asChild className={className}>
-      <Link
-        href={
-          process.env.CALENDLY_URL || "https://calendly.com/m2poweri25/30min"
-        }
-        target="_blank"
-        rel="noreferrer"
-      >
+      <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
         {label}
       </Link>
     </Button>

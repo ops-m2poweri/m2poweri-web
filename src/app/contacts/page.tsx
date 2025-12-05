@@ -49,25 +49,19 @@ export default function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // 1) prendo il tipo selezionato nel form
-    const rawType = (formData.get("type") as string) || "general";
+    const allowedTypes = ["contact", "poc", "newsletter"] as const;
+    type LeadType = (typeof allowedTypes)[number];
 
-    // 2) mappo i valori del select in quelli che si aspetta il backend / Prisma
-    //    general   -> contact
-    //    project   -> poc
-    //    agency    -> newsletter (o scegli tu come meglio ha senso)
-    const mappedType: "contact" | "poc" | "newsletter" =
-      rawType === "project"
-        ? "poc"
-        : rawType === "agency"
-        ? "newsletter"
-        : "contact";
+    const rawType = (formData.get("type") as string) || "contact";
+    const safeType: LeadType = allowedTypes.includes(rawType as LeadType)
+      ? (rawType as LeadType)
+      : "contact";
 
     const payload = {
       name: formData.get("name") as string,
       company: (formData.get("company") as string) || undefined,
       email: formData.get("email") as string,
-      type: mappedType,
+      type: safeType,
       message: formData.get("message") as string,
     };
 
