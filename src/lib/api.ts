@@ -36,3 +36,17 @@ export async function getLeads() {
 
   return res.json();
 }
+
+export async function bffFetch(
+  path: string,
+  options: RequestInit = {},
+): Promise<Response> {
+  return fetch(`${API_BASE_URL}${path}`, {
+    ...options,
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(options.headers || {}),
+    },
+  });
+}

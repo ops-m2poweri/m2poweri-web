@@ -10,7 +10,8 @@ import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { HamburgerBlob } from "../ui/hamburgher-blob";
 import { BookCallButton } from "../common/book-call-button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, LayoutDashboard } from "lucide-react";
+import { useAdminUser } from "@/hooks/useAdminUser";
 
 type NavItem = {
   href: string;
@@ -45,6 +46,7 @@ export function SiteHeader() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [servicesMobileOpen, setServicesMobileOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const { user, loading } = useAdminUser();
 
   useEffect(() => {
     const onScroll = () => {
@@ -180,8 +182,30 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* CTA desktop */}
-        <div className="hidden md:block">
+        {/* Desktop: icona admin + CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          {/* Icona admin */}
+          {!loading && (
+            <Link
+              href={user ? "/admin" : "/admin/login"}
+              className={[
+                "inline-flex h-9 w-9 items-center justify-center rounded-full border bg-slate-900/70 text-slate-200 transition-colors",
+                user
+                  ? "border-emerald-500/70 hover:border-emerald-400 hover:text-emerald-300"
+                  : "border-slate-700 hover:border-brand-blue/60 hover:text-brand-blue",
+              ].join(" ")}
+              aria-label={
+                user
+                  ? t("header.nav.adminDashboard", {
+                      defaultValue: "Open admin dashboard",
+                    })
+                  : t("header.nav.adminLogin", { defaultValue: "Admin login" })
+              }
+            >
+              <LayoutDashboard className="h-4 w-4" />
+            </Link>
+          )}
+
           <motion.div
             className="cursor-pointer"
             whileHover={

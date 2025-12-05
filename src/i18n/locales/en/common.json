@@ -119,7 +119,8 @@
         "label": "Services",
         "b2c": "B2C online presence",
         "poc": "Headless PoC",
-        "apps": "Custom web apps"
+        "apps": "Custom web apps",
+        "admin": "Admin"
       },
       "poc": "Headless PoC",
       "agency": "Web Agency",
