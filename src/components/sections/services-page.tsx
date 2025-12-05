@@ -8,21 +8,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-type ServiceConfig = {
-  id: string;
-  href: string;
-  i18nKey: string; // es: "services.cards.b2c"
-};
-
 const services = [
   {
     id: "b2c-presence",
-    href: "/services/presenza-b2c", // puoi lasciarlo anche solo "#" per ora
+    href: "/services/b2c-presence", // puoi lasciarlo anche solo "#" per ora
     i18nKey: "services.cards.b2c",
   },
   {
     id: "headless-poc",
-    href: "/headless-poc",
+    href: "/services/headless-poc",
     i18nKey: "services.cards.poc",
   },
   {
@@ -56,8 +50,22 @@ export function ServicesPage() {
               {t("services.hero.subtitle")}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button className="bg-brand-orange text-slate-950 shadow-md shadow-brand-orange/40 hover:bg-brand-orange/90">
-                {t("services.hero.primaryCta")}
+              <Button
+                asChild
+                size="lg"
+                className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
+              >
+                <Link
+                  href={
+                    process.env.CALENDLY_URL ||
+                    "https://calendly.com/m2poweri25/30min"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("headlessPoc.hero.primaryCta")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button
                 variant="outline"

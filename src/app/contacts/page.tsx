@@ -16,7 +16,6 @@ import {
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
 const CONTACT_EMAIL = "info@m2poweri.com";
 const CONTACT_PHONE_DISPLAY = "+44 303 003 2064";
 const CONTACT_PHONE_TEL = "+443030032064";
@@ -137,7 +136,14 @@ export default function ContactPage() {
                 size="lg"
                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
               >
-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+                <Link
+                  href={
+                    process.env.CALENDLY_URL ||
+                    "https://calendly.com/m2poweri25/30min"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {t("contact.hero.primaryCta")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -332,7 +338,14 @@ export default function ContactPage() {
                     variant="ghost"
                     className="cursor-pointer justify-start px-0 text-xs text-slate-400 hover:text-brand-blue"
                   >
-                    <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+                    <Link
+                      href={
+                        process.env.CALENDLY_URL ||
+                        "https://calendly.com/m2poweri25/30min"
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {t("contact.form.altCalendly")}
                       <ChevronRight className="ml-1 h-3 w-3" />
                     </Link>

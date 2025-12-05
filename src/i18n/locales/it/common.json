@@ -115,7 +115,12 @@
     "logoAlt": "Logo M2Poweri",
     "tagline": "Modern web. Headless PoC. Web app B2B/B2C.",
     "nav": {
-      "services": "Servizi",
+      "services": {
+        "label": "Servizi",
+        "b2c": "Presenza online B2C",
+        "poc": "Headless PoC",
+        "apps": "Web App custom"
+      },
       "poc": "Headless PoC",
       "agency": "Web Agency",
       "contacts": "Contatti"
@@ -298,8 +303,8 @@
       "badge": "Servizi",
       "title": "Tre modi per modernizzare il tuo digitale",
       "subtitle": "Presenza online B2C, PoC headless per B2C/B2B e web app custom: scegli il livello di intervento che ha più senso per il tuo business.",
-      "primaryCta": "Prenota una call",
-      "secondaryCta": "Scopri la Headless PoC",
+      "primaryCta": "Richiedi una valutazione",
+      "secondaryCta": "Vedi cosa è possibile",
       "sideTitle": "Cosa puoi ottenere",
       "sideItems": [
         "Performance e UX moderne senza replatforming totale",
@@ -336,6 +341,275 @@
       "title": "Non sei sicuro da dove iniziare?",
       "subtitle": "Possiamo aiutarti a capire se ti serve una semplice presenza online, una PoC headless o una web app custom.",
       "cta": "Parla con noi"
+    },
+
+    "details": {
+      "b2c": {
+        "hero": {
+          "badge": "Servizio · Presenza B2C",
+          "title": "Presenza online B2C che porta contatti veri",
+          "subtitle": "Landing page, siti vetrina e funnel costruiti per convertire traffico in richieste e appuntamenti.",
+          "kpi1Label": "Richieste da form",
+          "kpi1Value": "+65%",
+          "kpi1Note": "Incremento medio sui progetti locali dopo 3 mesi",
+          "kpi2Label": "Traffico da mobile",
+          "kpi2Value": "40%",
+          "kpi2Note": "Quota di contatti generati da smartphone",
+          "primaryCta": "Prenota una call",
+          "secondaryCta": "Scarica un esempio di progetto"
+        },
+        "whenTitle": "Quando ha senso scegliere la Presenza B2C",
+        "when": [
+          "Hai un sito vecchio, lento o non mobile friendly",
+          "Ricevi poche richieste nonostante campagne Ads o social",
+          "Non hai un modo chiaro per tracciare da dove arrivano i contatti",
+          "Ti serve una landing per una singola offerta o campagna",
+          "Vuoi qualcosa di semplice che puoi evolvere in futuro"
+        ],
+        "deliverablesTitle": "Cosa consegniamo in concreto",
+        "deliverables": [
+          "Landing page o mini-sito (fino a 3–4 pagine) in Next.js",
+          "Form contatto integrato con il tuo CRM o email",
+          "Tracciamento eventi principali (form, click telefono, WhatsApp)",
+          "Setup base di analytics / dashboard con i KPI principali",
+          "Mini guida per aggiornare testi e contenuti autonomamente"
+        ],
+        "case": {
+          "label": "Caso studio",
+          "title": "Studio dentistico di provincia",
+          "meta": "Sito locale, traffico da campagne Meta e ricerca organica",
+          "problemTitle": "Il problema",
+          "problem": "Lo studio aveva un sito vecchio in PHP, difficile da usare da mobile e senza tracciamento delle richieste. Le campagne portavano clic ma non era chiaro quante richieste reali arrivassero dal digitale.",
+          "solutionTitle": "La soluzione",
+          "solution": "Abbiamo progettato una nuova landing focalizzata sui servizi core, con form contatto chiaro, call-to-action per telefono e WhatsApp e integrazione con un semplice foglio di calcolo condiviso per tracciare ogni richiesta.",
+          "resultsTitle": "Risultati dopo 3 mesi",
+          "results": [
+            "+65% richieste da form rispetto al periodo precedente",
+            "40% delle richieste provenienti da mobile",
+            "Tempo medio sulla pagina principale passato da 25s a 1m05s",
+            "Lo studio ha iniziato a pianificare le campagne in base ai dati reali"
+          ]
+        },
+        "process": {
+          "title": "Come lavoriamo sulla presenza B2C",
+          "subtitle": "Un percorso veloce, guidato e con deliverable chiari già dalla prima settimana.",
+          "stepLabel": "Step {{index}}",
+          "steps": [
+            {
+              "title": "Discovery & obiettivi",
+              "description": "Capire il tuo servizio, il target e da dove arriva oggi il traffico per definire messaggio e struttura."
+            },
+            {
+              "title": "Wireframe e contenuti",
+              "description": "Impostiamo la struttura della pagina e ti aiutiamo a riorganizzare testi e call-to-action."
+            },
+            {
+              "title": "Implementazione e tracking",
+              "description": "Sviluppo in Next.js, setup del tracciamento e rilascio in produzione con breve walkthrough."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Domande frequenti sulla Presenza B2C",
+          "items": [
+            {
+              "q": "Possiamo usare il dominio che abbiamo già?",
+              "a": "Sì, possiamo collegare il nuovo sito o landing al dominio esistente e gestire il passaggio senza downtime."
+            },
+            {
+              "q": "Serve per forza un CRM?",
+              "a": "No, possiamo partire da una semplice integrazione via email o foglio di calcolo condiviso e introdurre un CRM solo se ha senso."
+            },
+            {
+              "q": "Quanto tempo serve per andare online?",
+              "a": "In media 2–4 settimane, a seconda di quanti contenuti devono essere creati da zero."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Vuoi capire se ti basta una landing?",
+          "subtitle": "Parliamo del tuo caso e ti diciamo se ha senso partire da una Presenza B2C o serve qualcosa di più strutturato.",
+          "button": "Prenota una call"
+        }
+      },
+
+      "poc": {
+        "hero": {
+          "badge": "Servizio · Headless PoC",
+          "title": "Headless PoC per migrare senza replatforming",
+          "subtitle": "Testiamo su una parte del tuo sito un frontend headless moderno, senza toccare tutto il monolite.",
+          "kpi1Label": "Miglioramento LCP",
+          "kpi1Value": "-2.1s",
+          "kpi1Note": "Riduzione media del Largest Contentful Paint su mobile",
+          "kpi2Label": "Uplift conversioni",
+          "kpi2Value": "+14%",
+          "kpi2Note": "Aumento medio sulla categoria testata",
+          "primaryCta": "Parla della tua PoC",
+          "secondaryCta": "Vedi come funziona in 5 giorni"
+        },
+        "whenTitle": "Quando ha senso una Headless PoC",
+        "when": [
+          "Hai un e-commerce o portale B2B lento ma non puoi rifare tutto da zero",
+          "Il team interno o l’IT sono scettici su un cambio di stack",
+          "Hai bisogno di numeri concreti prima di investire in una migrazione",
+          "Vuoi testare nuove UX solo su una categoria o sezione",
+          "Ti servono evidenze per portare un progetto in board"
+        ],
+        "deliverablesTitle": "Cosa consegniamo con la PoC",
+        "deliverables": [
+          "Micro-frontend PoC su una sezione o categoria chiave",
+          "Integrazione con le API esistenti (catalogo, pricing, auth dove necessario)",
+          "Setup di misurazione Core Web Vitals e conversioni",
+          "Report finale con confronto numerico tra versione attuale e PoC",
+          "Raccomandazione di roadmap per una migrazione graduale"
+        ],
+        "case": {
+          "label": "Caso studio",
+          "title": "E-commerce arredamento mid-size",
+          "meta": "1.500 SKU, stack legacy monolitico, forte traffico mobile",
+          "problemTitle": "Il problema",
+          "problem": "Le pagine categoria avevano LCP alto e layout instabile. Il team marketing era bloccato da tempi di sviluppo lunghi e il board non voleva approvare una replatforming completa.",
+          "solutionTitle": "La soluzione",
+          "solution": "Abbiamo costruito una PoC headless solo sulla categoria principale, mantenendo backend e logiche esistenti. Abbiamo confrontato il comportamento degli utenti tra versione legacy e nuova categoria headless.",
+          "resultsTitle": "Risultati PoC (2 settimane)",
+          "results": [
+            "LCP da 3.2s a 1.1s su mobile",
+            "CLS ridotto da 0.18 a 0.04",
+            "+14% conversion rate sulla categoria in test",
+            "-11% bounce rate sulle visite da mobile"
+          ]
+        },
+        "process": {
+          "title": "Come funziona la PoC in 5 giorni",
+          "subtitle": "Un percorso ultra focalizzato per avere numeri reali in tempi brevi.",
+          "stepLabel": "Step {{index}}",
+          "steps": [
+            {
+              "title": "Scoping",
+              "description": "Definiamo insieme la sezione da testare, i KPI e i vincoli tecnici partendo dallo stack esistente."
+            },
+            {
+              "title": "Implementazione PoC",
+              "description": "Sviluppo del frontend headless, integrazione con le API e setup di tracking e misurazioni."
+            },
+            {
+              "title": "Test & decisione",
+              "description": "Raccolta dati, confronto con la versione attuale e proposta di roadmap di migrazione."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Domande frequenti sulla PoC headless",
+          "items": [
+            {
+              "q": "La PoC può andare in produzione?",
+              "a": "Spesso sì: il codice è pensato per essere la base del rollout graduale. Valutiamo insieme cosa serve per renderla production-ready."
+            },
+            {
+              "q": "Serve cambiare anche il backend?",
+              "a": "No, la PoC lavora sulle API esistenti. Eventuali evoluzioni backend arrivano in un secondo momento, se hanno senso."
+            },
+            {
+              "q": "Quanto coinvolge il team interno?",
+              "a": "Teniamo il carico basso: ci servono soprattutto allineamento iniziale e accesso ai sistemi/API."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Vuoi numeri reali prima di migrare?",
+          "subtitle": "Possiamo disegnare una PoC su una sola categoria o funzionalità e misurare l’impatto prima di decidere.",
+          "button": "Raccontaci il tuo contesto"
+        }
+      },
+
+      "apps": {
+        "hero": {
+          "badge": "Servizio · Web app custom",
+          "title": "Web app B2B/B2C su misura, integrate nei tuoi sistemi",
+          "subtitle": "Portali clienti, dashboard interne e app multi-tenant costruite su stack moderno, API-first.",
+          "kpi1Label": "Ordini digitalizzati",
+          "kpi1Value": "70%",
+          "kpi1Note": "Quota ordini passati dal portale in 6 mesi",
+          "kpi2Label": "Tempo per ordine",
+          "kpi2Value": "-40%",
+          "kpi2Note": "Riduzione media sui processi manuali",
+          "primaryCta": "Parla del tuo caso",
+          "secondaryCta": "Vedi un esempio di portale"
+        },
+        "whenTitle": "Quando ha senso una web app custom",
+        "when": [
+          "Gestisci processi critici ancora via Excel, email o WhatsApp",
+          "Hai bisogno di un portale per clienti, partner o agenti",
+          "I software generici non si adattano bene alle tue regole di business",
+          "Ti serve un’app multi-tenant per servire più brand o clienti B2B",
+          "Vuoi integrare diversi sistemi (ERP, CRM, e-commerce) in un unico flusso"
+        ],
+        "deliverablesTitle": "Cosa consegniamo con una web app custom",
+        "deliverables": [
+          "Analisi dei processi e modellazione dei flussi principali",
+          "Design UX/UI adatto a utenti interni o B2B",
+          "Web app sviluppata su stack moderno (ad es. Next.js + NestJS / FastAPI)",
+          "Integrazione con sistemi esistenti tramite API/BFF",
+          "Dashboard base per monitorare uso e performance"
+        ],
+        "case": {
+          "label": "Caso studio",
+          "title": "Portale ordini per azienda food B2B",
+          "meta": "Rete di grossisti e agenti sul territorio nazionale",
+          "problemTitle": "Il problema",
+          "problem": "Ordini gestiti via telefono, email e messaggi, listini in Excel e nessuna visibilità centralizzata sul venduto. Molti errori di trascrizione e tempi lunghi per chiudere un ordine.",
+          "solutionTitle": "La soluzione",
+          "solution": "Abbiamo progettato un portale B2B dove agenti e clienti possono consultare listini personalizzati, inserire ordini e vedere lo stato delle consegne. Un layer API dialoga con il gestionale esistente.",
+          "resultsTitle": "Risultati dopo 6 mesi",
+          "results": [
+            "70% degli ordini passa attraverso il portale",
+            "Riduzione del 30% degli errori di inserimento",
+            "Tempo medio per ordine ridotto del 40%",
+            "Maggiore visibilità per il management su zone e performance"
+          ]
+        },
+        "process": {
+          "title": "Come progettiamo una web app custom",
+          "subtitle": "Partiamo dai processi reali e costruiamo solo ciò che serve davvero.",
+          "stepLabel": "Step {{index}}",
+          "steps": [
+            {
+              "title": "Workshop di processo",
+              "description": "Mappiamo flussi attuali, attori coinvolti e criticità per capire dove il software può dare più valore."
+            },
+            {
+              "title": "Prototipo cliccabile",
+              "description": "Creiamo un prototipo UX/UI per validare percorsi e schermate con gli utenti finali."
+            },
+            {
+              "title": "Implementazione e integrazione",
+              "description": "Sviluppo dell’app, collegamento ai sistemi esistenti e fase di test con un gruppo pilota."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Domande frequenti sulle web app custom",
+          "items": [
+            {
+              "q": "Quanto è complesso gestire una web app custom nel tempo?",
+              "a": "Progettiamo l’architettura pensando alla manutenzione: documentazione chiara, separazione tra frontend e backend e possibilità di handover al tuo team o partner di fiducia."
+            },
+            {
+              "q": "Possiamo partire piccolo e allargare in seguito?",
+              "a": "Sì, spesso iniziamo con un singolo processo o gruppo di utenti e poi estendiamo la copertura in più release."
+            },
+            {
+              "q": "Supportate anche hosting e osservabilità?",
+              "a": "Possiamo aiutarti a scegliere infrastruttura e setup di logging/monitoring, oppure lavorare con il tuo team DevOps."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Hai un processo che merita una web app?",
+          "subtitle": "Raccontaci come lavori oggi: possiamo disegnare insieme un MVP di applicazione custom e stimarne l’impatto.",
+          "button": "Discuti un MVP con noi"
+        }
+      }
     }
   },
   "webAgency": {

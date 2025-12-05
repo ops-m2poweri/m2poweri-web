@@ -16,8 +16,6 @@ import {
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
-
 const sectionVariant: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
@@ -80,7 +78,14 @@ export default function HeadlessPocPage() {
                 size="lg"
                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
               >
-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+                <Link
+                  href={
+                    process.env.CALENDLY_URL ||
+                    "https://calendly.com/m2poweri25/30min"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {t("headlessPoc.hero.primaryCta")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -474,7 +479,14 @@ export default function HeadlessPocPage() {
                   asChild
                   className="cursor-pointer bg-brand-orange text-slate-950 shadow-md shadow-brand-orange/40 hover:bg-brand-orange/90"
                 >
-                  <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+                  <Link
+                    href={
+                      process.env.CALENDLY_URL ||
+                      "https://calendly.com/m2poweri25/30min"
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {t("headlessPoc.cta.primaryCta")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

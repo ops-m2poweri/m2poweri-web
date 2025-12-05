@@ -1,0 +1,1102 @@
+diff --git a/src/app/contacts/page.tsx b/src/app/contacts/page.tsx
+index d0fae89..68908f5 100644
+--- a/src/app/contacts/page.tsx
++++ b/src/app/contacts/page.tsx
+@@ -16,7 +16,6 @@ import {
+ import { useState } from "react";
+ import { Button } from "@/components/ui/button";
+ 
+-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
+ const CONTACT_EMAIL = "info@m2poweri.com";
+ const CONTACT_PHONE_DISPLAY = "+44 303 003 2064";
+ const CONTACT_PHONE_TEL = "+443030032064";
+@@ -137,7 +136,14 @@ export default function ContactPage() {
+                 size="lg"
+                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
+               >
+-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++                <Link
++                  href={
++                    process.env.CALENDLY_URL ||
++                    "https://calendly.com/m2poweri25/30min"
++                  }
++                  target="_blank"
++                  rel="noreferrer"
++                >
+                   {t("contact.hero.primaryCta")}
+                   <ArrowRight className="ml-2 h-4 w-4" />
+                 </Link>
+@@ -332,7 +338,14 @@ export default function ContactPage() {
+                     variant="ghost"
+                     className="cursor-pointer justify-start px-0 text-xs text-slate-400 hover:text-brand-blue"
+                   >
+-                    <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++                    <Link
++                      href={
++                        process.env.CALENDLY_URL ||
++                        "https://calendly.com/m2poweri25/30min"
++                      }
++                      target="_blank"
++                      rel="noreferrer"
++                    >
+                       {t("contact.form.altCalendly")}
+                       <ChevronRight className="ml-1 h-3 w-3" />
+                     </Link>
+diff --git a/src/app/headless-poc/page.tsx b/src/app/headless-poc/page.tsx
+index 25821f6..8e9cf42 100644
+--- a/src/app/headless-poc/page.tsx
++++ b/src/app/headless-poc/page.tsx
+@@ -16,8 +16,6 @@ import {
+ import { useTranslation } from "react-i18next";
+ import { Button } from "@/components/ui/button";
+ 
+-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
+-
+ const sectionVariant: Variants = {
+   hidden: { opacity: 0, y: 20 },
+   visible: (i: number) => ({
+@@ -80,7 +78,14 @@ export default function HeadlessPocPage() {
+                 size="lg"
+                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
+               >
+-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++                <Link
++                  href={
++                    process.env.CALENDLY_URL ||
++                    "https://calendly.com/m2poweri25/30min"
++                  }
++                  target="_blank"
++                  rel="noreferrer"
++                >
+                   {t("headlessPoc.hero.primaryCta")}
+                   <ArrowRight className="ml-2 h-4 w-4" />
+                 </Link>
+@@ -474,7 +479,14 @@ export default function HeadlessPocPage() {
+                   asChild
+                   className="cursor-pointer bg-brand-orange text-slate-950 shadow-md shadow-brand-orange/40 hover:bg-brand-orange/90"
+                 >
+-                  <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++                  <Link
++                    href={
++                      process.env.CALENDLY_URL ||
++                      "https://calendly.com/m2poweri25/30min"
++                    }
++                    target="_blank"
++                    rel="noreferrer"
++                  >
+                     {t("headlessPoc.cta.primaryCta")}
+                     <ArrowRight className="ml-2 h-4 w-4" />
+                   </Link>
+diff --git a/src/app/web-agency/page.tsx b/src/app/web-agency/page.tsx
+index 103b7fd..8460f68 100644
+--- a/src/app/web-agency/page.tsx
++++ b/src/app/web-agency/page.tsx
+@@ -8,8 +8,6 @@ import { motion, type Variants } from "framer-motion";
+ import { ArrowRight, Handshake, Rocket, Lightbulb } from "lucide-react";
+ import { Button } from "@/components/ui/button";
+ 
+-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
+-
+ const sectionVariants: Variants = {
+   hidden: { opacity: 0, y: 20 },
+   visible: {
+@@ -66,7 +64,14 @@ export default function WebAgencyPage() {
+                 size="lg"
+                 className="bg-brand-orange text-slate-950 hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/40"
+               >
+-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++                <Link
++                  href={
++                    process.env.CALENDLY_URL ||
++                    "https://calendly.com/m2poweri25/30min"
++                  }
++                  target="_blank"
++                  rel="noreferrer"
++                >
+                   {t("webAgency.hero.primaryCta")}
+                   <ArrowRight className="ml-2 h-4 w-4" />
+                 </Link>
+@@ -180,7 +185,14 @@ export default function WebAgencyPage() {
+               size="lg"
+               className="bg-brand-orange text-slate-950 hover:bg-brand-orange/90 shadow-md shadow-brand-orange/40"
+             >
+-              <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++              <Link
++                href={
++                  process.env.CALENDLY_URL ||
++                  "https://calendly.com/m2poweri25/30min"
++                }
++                target="_blank"
++                rel="noreferrer"
++              >
+                 {t("webAgency.cta.primaryCta")}
+                 <ArrowRight className="ml-2 h-4 w-4" />
+               </Link>
+diff --git a/src/components/common/book-call-button.tsx b/src/components/common/book-call-button.tsx
+index 6e584a3..985b108 100644
+--- a/src/components/common/book-call-button.tsx
++++ b/src/components/common/book-call-button.tsx
+@@ -4,8 +4,6 @@
+ import Link from "next/link";
+ import { Button } from "@/components/ui/button";
+ 
+-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
+-
+ type Props = {
+   label: string; // es. t("header.cta") o t("home.hero.primaryCta")
+   className?: string;
+@@ -14,7 +12,13 @@ type Props = {
+ export function BookCallButton({ label, className }: Props) {
+   return (
+     <Button asChild className={className}>
+-      <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
++      <Link
++        href={
++          process.env.CALENDLY_URL || "https://calendly.com/m2poweri25/30min"
++        }
++        target="_blank"
++        rel="noreferrer"
++      >
+         {label}
+       </Link>
+     </Button>
+diff --git a/src/components/layout/site-header.tsx b/src/components/layout/site-header.tsx
+index 8bcf317..63e6015 100644
+--- a/src/components/layout/site-header.tsx
++++ b/src/components/layout/site-header.tsx
+@@ -8,12 +8,31 @@ import { useEffect, useState } from "react";
+ import Link from "next/link";
+ import Image from "next/image";
+ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+-import { Button } from "@/components/ui/button";
+ import { HamburgerBlob } from "../ui/hamburgher-blob";
+ import { BookCallButton } from "../common/book-call-button";
++import { ChevronDown } from "lucide-react";
+ 
+-const navItems = [
+-  { href: "/services", key: "header.nav.services" },
++type NavItem = {
++  href: string;
++  key: string;
++};
++
++const servicesNavItems: NavItem[] = [
++  {
++    href: "/services/b2c-presence", // adattalo ai tuoi path
++    key: "header.nav.services.b2c",
++  },
++  {
++    href: "/services/headless-poc",
++    key: "header.nav.services.poc",
++  },
++  {
++    href: "/services/web-app-custom",
++    key: "header.nav.services.apps",
++  },
++];
++
++const mainNavItems: NavItem[] = [
+   { href: "/headless-poc", key: "header.nav.poc" },
+   { href: "/web-agency", key: "header.nav.agency" },
+   { href: "/contacts", key: "header.nav.contacts" },
+@@ -23,6 +42,8 @@ export function SiteHeader() {
+   const { t } = useTranslation("common");
+   const [open, setOpen] = useState(false);
+   const [scrolled, setScrolled] = useState(false);
++  const [servicesOpen, setServicesOpen] = useState(false);
++  const [servicesMobileOpen, setServicesMobileOpen] = useState(false);
+   const prefersReducedMotion = useReducedMotion();
+ 
+   useEffect(() => {
+@@ -34,7 +55,12 @@ export function SiteHeader() {
+     return () => window.removeEventListener("scroll", onScroll);
+   }, []);
+ 
+-  const toggle = () => setOpen((prev) => !prev);
++  const toggleMobile = () => setOpen((prev) => !prev);
++
++  const closeMobile = () => {
++    setOpen(false);
++    setServicesMobileOpen(false);
++  };
+ 
+   return (
+     <motion.header
+@@ -76,7 +102,59 @@ export function SiteHeader() {
+ 
+         {/* Desktop nav */}
+         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+-          {navItems.map((item) => (
++          {/* SERVICES + DROPDOWN */}
++          <div
++            className="relative"
++            onMouseEnter={() => setServicesOpen(true)}
++            onMouseLeave={() => setServicesOpen(false)}
++          >
++            <motion.button
++              type="button"
++              whileHover={
++                !prefersReducedMotion ? { y: -1, opacity: 1 } : undefined
++              }
++              className="group flex items-center gap-1 text-slate-200 transition-colors hover:text-brand-blue"
++            >
++              <Link href="/services" className="flex items-center gap-1">
++                <span>{t("header.nav.services.label")}</span>
++                <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
++              </Link>
++            </motion.button>
++
++            <AnimatePresence>
++              {servicesOpen && (
++                <motion.div
++                  initial={{ opacity: 0, y: 6 }}
++                  animate={{ opacity: 1, y: 0 }}
++                  exit={{ opacity: 0, y: 6 }}
++                  transition={{ duration: 0.16, ease: "easeOut" }}
++                  className="absolute right-0 mt-2 w-64 rounded-2xl border border-slate-800 bg-slate-950/98 p-2 shadow-2xl shadow-slate-950/70"
++                >
++                  {servicesNavItems.map((item) => (
++                    <Link
++                      key={item.key}
++                      href={item.href}
++                      className="group flex flex-col rounded-xl px-3 py-2 text-left text-xs text-slate-200 hover:bg-slate-900/90"
++                    >
++                      <span className="font-medium group-hover:text-brand-blue">
++                        {t(item.key)}
++                      </span>
++                      <span className="mt-0.5 text-[11px] text-slate-400">
++                        {/* puoi definire descrizioni tipo header.nav.services.b2cDesc se ti va */}
++                        {/* fallback minimal: */}
++                        {t(`${item.key}Desc`, {
++                          defaultValue: "",
++                        })}
++                      </span>
++                    </Link>
++                  ))}
++                </motion.div>
++              )}
++            </AnimatePresence>
++          </div>
++
++          {/* Altri item main */}
++          {mainNavItems.map((item) => (
+             <motion.div
+               key={item.key}
+               whileHover={
+@@ -121,7 +199,7 @@ export function SiteHeader() {
+         {/* Mobile menu toggle */}
+         <motion.button
+           className="inline-flex items-center justify-center rounded-md p-1.5 text-slate-100 md:hidden cursor-pointer"
+-          onClick={toggle}
++          onClick={toggleMobile}
+           aria-label="Toggle navigation"
+           whileTap={!prefersReducedMotion ? { scale: 0.9 } : undefined}
+         >
+@@ -141,14 +219,67 @@ export function SiteHeader() {
+             className="border-t border-slate-700/70 bg-slate-950/95 md:hidden"
+           >
+             <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+-              {navItems.map((item, index) => (
++              {/* Mobile: Services dropdown */}
++              <div className="cursor-pointer">
++                <button
++                  type="button"
++                  onClick={() => setServicesMobileOpen((prev) => !prev)}
++                  className="group flex w-full items-center justify-between py-2 text-sm font-medium text-slate-100"
++                >
++                  <span className="transition-colors group-hover:text-brand-blue">
++                    {t("header.nav.services.label")}
++                  </span>
++                  <ChevronDown
++                    className={`h-4 w-4 transition-transform ${
++                      servicesMobileOpen ? "rotate-180" : ""
++                    }`}
++                  />
++                </button>
++
++                <AnimatePresence initial={false}>
++                  {servicesMobileOpen && (
++                    <motion.div
++                      initial={{ opacity: 0, y: -4 }}
++                      animate={{ opacity: 1, y: 0 }}
++                      exit={{ opacity: 0, y: -4 }}
++                      transition={{ duration: 0.16 }}
++                      className="ml-2 border-l border-slate-700/70 pl-3"
++                    >
++                      {servicesNavItems.map((item, index) => (
++                        <motion.div
++                          key={item.key}
++                          initial={{ opacity: 0, x: -6 }}
++                          animate={{ opacity: 1, x: 0 }}
++                          transition={{
++                            duration: 0.16,
++                            delay: 0.02 * index,
++                          }}
++                        >
++                          <Link
++                            href={item.href}
++                            className="group flex items-center justify-between py-1.5 text-[13px] text-slate-200"
++                            onClick={closeMobile}
++                          >
++                            <span className="transition-colors group-hover:text-brand-blue">
++                              {t(item.key)}
++                            </span>
++                          </Link>
++                        </motion.div>
++                      ))}
++                    </motion.div>
++                  )}
++                </AnimatePresence>
++              </div>
++
++              {/* Mobile: altri link */}
++              {mainNavItems.map((item, index) => (
+                 <motion.div
+                   key={item.key}
+                   initial={{ opacity: 0, x: -10 }}
+                   animate={{ opacity: 1, x: 0 }}
+                   transition={{
+                     duration: 0.18,
+-                    delay: 0.03 * index,
++                    delay: 0.03 * (index + 1),
+                   }}
+                   whileHover={!prefersReducedMotion ? { x: 4 } : undefined}
+                   className="cursor-pointer"
+@@ -156,26 +287,30 @@ export function SiteHeader() {
+                   <Link
+                     href={item.href}
+                     className="group flex items-center justify-between py-2 text-sm font-medium text-slate-100"
+-                    onClick={() => setOpen(false)}
++                    onClick={closeMobile}
+                   >
+                     <span className="transition-colors group-hover:text-brand-blue">
+                       {t(item.key)}
+                     </span>
+-                    {/* barra gradient che appare in hover */}
+                     <span className="h-[2px] w-8 rounded-full bg-gradient-to-r from-brand-blue via-brand-mauve to-brand-orange opacity-0 transition-opacity group-hover:opacity-100" />
+                   </Link>
+                 </motion.div>
+               ))}
+ 
++              {/* CTA mobile */}
+               <motion.div
+                 initial={{ opacity: 0, y: 8 }}
+                 animate={{ opacity: 1, y: 0 }}
+-                transition={{ duration: 0.18, delay: 0.03 * navItems.length }}
++                transition={{
++                  duration: 0.18,
++                  delay: 0.03 * (mainNavItems.length + 2),
++                }}
+                 className="cursor-pointer"
+                 whileHover={
+                   !prefersReducedMotion ? { y: -1, scale: 1.01 } : undefined
+                 }
+                 whileTap={!prefersReducedMotion ? { scale: 0.97 } : undefined}
++                onClick={closeMobile}
+               >
+                 <BookCallButton
+                   label={t("header.cta")}
+diff --git a/src/components/sections/home-hero.tsx b/src/components/sections/home-hero.tsx
+index 95ee3af..d9744fb 100644
+--- a/src/components/sections/home-hero.tsx
++++ b/src/components/sections/home-hero.tsx
+@@ -201,7 +201,7 @@ export function HomeHero() {
+                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
+               >
+                 <Link
+-                  href="https://calendly.com/m2poweri25/30min" // <-- metti il tuo link
++                  href="https://calendly.com/m2poweri25/30min"
+                   target="_blank"
+                   rel="noreferrer"
+                 >
+@@ -217,7 +217,7 @@ export function HomeHero() {
+               <Button
+                 size="lg"
+                 variant="outline"
+-                className="border-brand-blue/50 text-brand-blue hover:bg-brand-blue/10 hover:text-slate-50"
++                className="border-brand-blue/40 bg-slate-900/60 text-brand-blue hover:bg-brand-blue/10 hover:text-slate-50"
+               >
+                 <Link href="/headless-poc">{t("home.hero.secondaryCta")}</Link>
+               </Button>
+diff --git a/src/components/sections/services-page.tsx b/src/components/sections/services-page.tsx
+index 9820573..84e74e1 100644
+--- a/src/components/sections/services-page.tsx
++++ b/src/components/sections/services-page.tsx
+@@ -8,21 +8,15 @@ import Link from "next/link";
+ import { ArrowRight } from "lucide-react";
+ import { Button } from "@/components/ui/button";
+ 
+-type ServiceConfig = {
+-  id: string;
+-  href: string;
+-  i18nKey: string; // es: "services.cards.b2c"
+-};
+-
+ const services = [
+   {
+     id: "b2c-presence",
+-    href: "/services/presenza-b2c", // puoi lasciarlo anche solo "#" per ora
++    href: "/services/b2c-presence", // puoi lasciarlo anche solo "#" per ora
+     i18nKey: "services.cards.b2c",
+   },
+   {
+     id: "headless-poc",
+-    href: "/headless-poc",
++    href: "/services/headless-poc",
+     i18nKey: "services.cards.poc",
+   },
+   {
+@@ -56,8 +50,22 @@ export function ServicesPage() {
+               {t("services.hero.subtitle")}
+             </p>
+             <div className="flex flex-wrap gap-3">
+-              <Button className="bg-brand-orange text-slate-950 shadow-md shadow-brand-orange/40 hover:bg-brand-orange/90">
+-                {t("services.hero.primaryCta")}
++              <Button
++                asChild
++                size="lg"
++                className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
++              >
++                <Link
++                  href={
++                    process.env.CALENDLY_URL ||
++                    "https://calendly.com/m2poweri25/30min"
++                  }
++                  target="_blank"
++                  rel="noreferrer"
++                >
++                  {t("headlessPoc.hero.primaryCta")}
++                  <ArrowRight className="ml-2 h-4 w-4" />
++                </Link>
+               </Button>
+               <Button
+                 variant="outline"
+diff --git a/src/i18n/locales/en/common.json b/src/i18n/locales/en/common.json
+index 9f8ee4d..5a03eec 100644
+--- a/src/i18n/locales/en/common.json
++++ b/src/i18n/locales/en/common.json
+@@ -115,7 +115,12 @@
+     "logoAlt": "M2Poweri logo",
+     "tagline": "Modern web. Headless PoC. B2B/B2C web apps.",
+     "nav": {
+-      "services": "Services",
++      "services": {
++        "label": "Services",
++        "b2c": "B2C online presence",
++        "poc": "Headless PoC",
++        "apps": "Custom web apps"
++      },
+       "poc": "Headless PoC",
+       "agency": "Web Agency",
+       "contacts": "Contact"
+@@ -297,9 +302,9 @@
+     "hero": {
+       "badge": "Services",
+       "title": "Three ways to modernise your digital",
+-      "subtitle": "B2C online presence, headless PoC for B2C/B2B and custom web apps: choose the level of engagement that makes sense for your business.",
+-      "primaryCta": "Book a call",
+-      "secondaryCta": "Learn about the Headless PoC",
++      "subtitle": "B2C online presence, headless PoC for B2C/B2B and custom web apps: choose the engagement level that makes sense for your business.",
++      "primaryCta": "Get your feasibility check",
++      "secondaryCta": "See what's possible",
+       "sideTitle": "What you can get",
+       "sideItems": [
+         "Modern performance and UX without a full replatform",
+@@ -309,14 +314,14 @@
+     },
+     "list": {
+       "title": "Our services",
+-      "subtitle": "From online presence to headless restructuring and fully tailored web apps.",
++      "subtitle": "From online presence to headless restructuring and tailored web apps.",
+       "cta": "View details"
+     },
+     "cards": {
+       "b2c": {
+         "label": "B2C presence",
+         "title": "B2C online presence",
+-        "description": "Landing pages, marketing sites and funnels designed to bring leads and sales, with modern performance and UX.",
++        "description": "Marketing sites, landing pages and funnels designed to turn traffic into leads and sales, with modern performance and UX.",
+         "tags": ["Local business", "Freelance", "B2C brands"]
+       },
+       "poc": {
+@@ -336,6 +341,275 @@
+       "title": "Not sure where to start?",
+       "subtitle": "We can help you understand whether you need a simple online presence, a headless PoC or a custom web app.",
+       "cta": "Talk to us"
++    },
++
++    "details": {
++      "b2c": {
++        "hero": {
++          "badge": "Service · B2C presence",
++          "title": "B2C online presence that brings real leads",
++          "subtitle": "Landing pages, marketing sites and funnels built to convert traffic into enquiries and bookings.",
++          "kpi1Label": "Form enquiries",
++          "kpi1Value": "+65%",
++          "kpi1Note": "Average increase on local projects after 3 months",
++          "kpi2Label": "Traffic from mobile",
++          "kpi2Value": "40%",
++          "kpi2Note": "Share of enquiries generated from smartphones",
++          "primaryCta": "Book a call",
++          "secondaryCta": "See an example project"
++        },
++        "whenTitle": "When B2C presence is a good fit",
++        "when": [
++          "You have an old, slow or non-mobile-friendly site",
++          "You get few enquiries despite running Ads or social campaigns",
++          "You have no clear way to track where leads are coming from",
++          "You need a landing page for a specific offer or campaign",
++          "You want something simple now that you can extend later"
++        ],
++        "deliverablesTitle": "What we deliver concretely",
++        "deliverables": [
++          "Landing page or mini-site (up to 3–4 pages) built in Next.js",
++          "Contact form integrated with your email or CRM",
++          "Tracking for key events (form submits, phone clicks, WhatsApp)",
++          "Basic analytics / dashboard setup with your main KPIs",
++          "Short guide so you can update copy and content by yourself"
++        ],
++        "case": {
++          "label": "Case study",
++          "title": "Local dental clinic",
++          "meta": "Local site, traffic from Meta campaigns and organic search",
++          "problemTitle": "The problem",
++          "problem": "The clinic had an old PHP site, hard to use on mobile and without any tracking. Campaigns generated clicks but it was unclear how many real enquiries came from digital.",
++          "solutionTitle": "The solution",
++          "solution": "We designed a new landing focused on core services, with a clear contact form, strong call-to-actions for phone and WhatsApp, and a simple shared spreadsheet to track every enquiry.",
++          "resultsTitle": "Results after 3 months",
++          "results": [
++            "+65% form enquiries compared to the previous period",
++            "40% of enquiries coming from mobile devices",
++            "Average time on the main page increased from 25s to 1m05s",
++            "The clinic started planning campaigns based on real data"
++          ]
++        },
++        "process": {
++          "title": "How we build B2C presence",
++          "subtitle": "A fast, guided path with clear deliverables from week one.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Discovery & goals",
++              "description": "We understand your service, audience and current traffic so we can define the right message and structure."
++            },
++            {
++              "title": "Wireframes and content",
++              "description": "We shape the page structure and help you reorganise copy, messaging and call-to-actions."
++            },
++            {
++              "title": "Implementation & tracking",
++              "description": "We develop in Next.js, set up tracking and release to production with a short walkthrough."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Questions about B2C presence",
++          "items": [
++            {
++              "q": "Can we reuse our existing domain?",
++              "a": "Yes. We can point the new site or landing to your current domain and handle the switch with no downtime."
++            },
++            {
++              "q": "Do we need a CRM from day one?",
++              "a": "No. We can start with email or a shared spreadsheet and only add a CRM if and when it becomes useful."
++            },
++            {
++              "q": "How long does it take to go live?",
++              "a": "Typically 2–4 weeks, depending on how much content needs to be created from scratch."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Not sure if a landing is enough?",
++          "subtitle": "Tell us about your case and we’ll let you know if a simple B2C presence is enough or if you need something more structured.",
++          "button": "Book a call"
++        }
++      },
++
++      "poc": {
++        "hero": {
++          "badge": "Service · Headless PoC",
++          "title": "Headless PoC to migrate without replatforming",
++          "subtitle": "We test a modern headless frontend on just one part of your site, without touching the whole monolith.",
++          "kpi1Label": "LCP improvement",
++          "kpi1Value": "-2.1s",
++          "kpi1Note": "Average Largest Contentful Paint reduction on mobile",
++          "kpi2Label": "Conversion uplift",
++          "kpi2Value": "+14%",
++          "kpi2Note": "Average increase on the tested category",
++          "primaryCta": "Discuss your PoC",
++          "secondaryCta": "See how the 5-day PoC works"
++        },
++        "whenTitle": "When a headless PoC makes sense",
++        "when": [
++          "You run an e-commerce or B2B portal that is slow but you can’t rebuild everything from scratch",
++          "Your internal team or IT is sceptical about changing stack",
++          "You need concrete numbers before investing in a migration",
++          "You want to test new UX only on one category or section",
++          "You need evidence to bring a project to the board"
++        ],
++        "deliverablesTitle": "What we deliver with the PoC",
++        "deliverables": [
++          "Micro-frontend PoC on a key section or category",
++          "Integration with existing APIs (catalogue, pricing, auth where needed)",
++          "Core Web Vitals and conversion tracking setup",
++          "Final report comparing current version vs PoC",
++          "Suggested roadmap for a gradual migration"
++        ],
++        "case": {
++          "label": "Case study",
++          "title": "Mid-size furniture e-commerce",
++          "meta": "1,500 SKUs, legacy monolithic stack, strong mobile traffic",
++          "problemTitle": "The problem",
++          "problem": "Category pages had high LCP and unstable layout. The marketing team was blocked by long development cycles and the board didn’t want to approve a full replatform.",
++          "solutionTitle": "The solution",
++          "solution": "We built a headless PoC only on the main category, keeping backend and business logic as they were. We compared user behaviour between the legacy category and the new headless one.",
++          "resultsTitle": "PoC results (2-week test)",
++          "results": [
++            "LCP reduced from 3.2s to 1.1s on mobile",
++            "CLS reduced from 0.18 to 0.04",
++            "+14% conversion rate on the tested category",
++            "-11% bounce rate on mobile traffic"
++          ]
++        },
++        "process": {
++          "title": "How the 5-day PoC works",
++          "subtitle": "A highly focused path to get real numbers in a very short time.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Scoping",
++              "description": "We define the section to test, the KPIs and technical constraints based on your current stack."
++            },
++            {
++              "title": "PoC implementation",
++              "description": "We build the headless frontend, integrate with your APIs and set up tracking and measurements."
++            },
++            {
++              "title": "Test & decision",
++              "description": "We gather data, compare it with the existing version and propose a migration roadmap."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Questions about the headless PoC",
++          "items": [
++            {
++              "q": "Can the PoC go into production?",
++              "a": "Often yes. The code is designed to be the base for a gradual rollout. We’ll assess together what’s needed to make it production-ready."
++            },
++            {
++              "q": "Do we have to change the backend as well?",
++              "a": "No. The PoC works on your existing APIs. Backend evolution can happen later if and when it creates clear value."
++            },
++            {
++              "q": "How much does it involve our team?",
++              "a": "We keep the load low: we mainly need alignment at the beginning and access to systems/APIs."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Want real numbers before migrating?",
++          "subtitle": "We can design a PoC on a single category or feature and measure the impact before you decide.",
++          "button": "Tell us about your context"
++        }
++      },
++
++      "apps": {
++        "hero": {
++          "badge": "Service · Custom web apps",
++          "title": "Custom B2B/B2C web apps integrated with your systems",
++          "subtitle": "Client portals, internal dashboards and multi-tenant apps built on a modern, API-first stack.",
++          "kpi1Label": "Orders digitalised",
++          "kpi1Value": "70%",
++          "kpi1Note": "Share of orders going through the portal after 6 months",
++          "kpi2Label": "Time per order",
++          "kpi2Value": "-40%",
++          "kpi2Note": "Average reduction on manual processes",
++          "primaryCta": "Discuss your case",
++          "secondaryCta": "See a portal example"
++        },
++        "whenTitle": "When a custom web app makes sense",
++        "when": [
++          "You still run critical processes via Excel, email or messaging apps",
++          "You need a portal for clients, partners or agents",
++          "Generic off-the-shelf software doesn’t fit your business rules",
++          "You need a multi-tenant app to serve several brands or B2B clients",
++          "You want to integrate several systems (ERP, CRM, e-commerce) into one flow"
++        ],
++        "deliverablesTitle": "What we deliver with a custom web app",
++        "deliverables": [
++          "Process analysis and modelling of the main flows",
++          "UX/UI design tailored to internal or B2B users",
++          "Web app built on a modern stack (e.g. Next.js + NestJS / FastAPI)",
++          "Integration with existing systems via APIs/BFF",
++          "Basic admin/dashboard to monitor usage and performance"
++        ],
++        "case": {
++          "label": "Case study",
++          "title": "Orders portal for a B2B food company",
++          "meta": "Network of wholesalers and field agents nationwide",
++          "problemTitle": "The problem",
++          "problem": "Orders were managed via phone, email and messages, with price lists in Excel and no central visibility on what was being sold. Many transcription errors and long times to finalise an order.",
++          "solutionTitle": "The solution",
++          "solution": "We designed a B2B portal where agents and clients can access personalised price lists, place orders and track delivery status. An API layer talks to the existing ERP.",
++          "resultsTitle": "Results after 6 months",
++          "results": [
++            "70% of orders go through the portal",
++            "30% fewer entry errors",
++            "Average time per order reduced by 40%",
++            "Better visibility for management across regions and performance"
++          ]
++        },
++        "process": {
++          "title": "How we design a custom web app",
++          "subtitle": "We start from real processes and only build what actually adds value.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Process workshop",
++              "description": "We map current flows, stakeholders and pain points to identify where software can create the most value."
++            },
++            {
++              "title": "Clickable prototype",
++              "description": "We create a UX/UI prototype to validate screens and journeys with real users."
++            },
++            {
++              "title": "Implementation & integration",
++              "description": "We develop the app, connect it to your systems and run a pilot with a first group of users."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Questions about custom web apps",
++          "items": [
++            {
++              "q": "How hard is it to maintain a custom app over time?",
++              "a": "We design the architecture with maintenance in mind: clear documentation, separation between frontend and backend, and the option to hand over to your internal team or a partner."
++            },
++            {
++              "q": "Can we start small and expand later?",
++              "a": "Yes. We often start with a single process or user group, then extend coverage in further releases."
++            },
++            {
++              "q": "Do you also handle hosting and observability?",
++              "a": "We can help you choose infrastructure and set up logging/monitoring, or work together with your DevOps team."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Do you have a process that deserves a web app?",
++          "subtitle": "Tell us how you work today: we can sketch an MVP for a custom application and estimate its impact.",
++          "button": "Discuss an MVP with us"
++        }
++      }
+     }
+   },
+   "webAgency": {
+diff --git a/src/i18n/locales/it/common.json b/src/i18n/locales/it/common.json
+index 61c59ce..4474b97 100644
+--- a/src/i18n/locales/it/common.json
++++ b/src/i18n/locales/it/common.json
+@@ -115,7 +115,12 @@
+     "logoAlt": "Logo M2Poweri",
+     "tagline": "Modern web. Headless PoC. Web app B2B/B2C.",
+     "nav": {
+-      "services": "Servizi",
++      "services": {
++        "label": "Servizi",
++        "b2c": "Presenza online B2C",
++        "poc": "Headless PoC",
++        "apps": "Web App custom"
++      },
+       "poc": "Headless PoC",
+       "agency": "Web Agency",
+       "contacts": "Contatti"
+@@ -298,8 +303,8 @@
+       "badge": "Servizi",
+       "title": "Tre modi per modernizzare il tuo digitale",
+       "subtitle": "Presenza online B2C, PoC headless per B2C/B2B e web app custom: scegli il livello di intervento che ha più senso per il tuo business.",
+-      "primaryCta": "Prenota una call",
+-      "secondaryCta": "Scopri la Headless PoC",
++      "primaryCta": "Richiedi una valutazione",
++      "secondaryCta": "Vedi cosa è possibile",
+       "sideTitle": "Cosa puoi ottenere",
+       "sideItems": [
+         "Performance e UX moderne senza replatforming totale",
+@@ -336,6 +341,275 @@
+       "title": "Non sei sicuro da dove iniziare?",
+       "subtitle": "Possiamo aiutarti a capire se ti serve una semplice presenza online, una PoC headless o una web app custom.",
+       "cta": "Parla con noi"
++    },
++
++    "details": {
++      "b2c": {
++        "hero": {
++          "badge": "Servizio · Presenza B2C",
++          "title": "Presenza online B2C che porta contatti veri",
++          "subtitle": "Landing page, siti vetrina e funnel costruiti per convertire traffico in richieste e appuntamenti.",
++          "kpi1Label": "Richieste da form",
++          "kpi1Value": "+65%",
++          "kpi1Note": "Incremento medio sui progetti locali dopo 3 mesi",
++          "kpi2Label": "Traffico da mobile",
++          "kpi2Value": "40%",
++          "kpi2Note": "Quota di contatti generati da smartphone",
++          "primaryCta": "Prenota una call",
++          "secondaryCta": "Scarica un esempio di progetto"
++        },
++        "whenTitle": "Quando ha senso scegliere la Presenza B2C",
++        "when": [
++          "Hai un sito vecchio, lento o non mobile friendly",
++          "Ricevi poche richieste nonostante campagne Ads o social",
++          "Non hai un modo chiaro per tracciare da dove arrivano i contatti",
++          "Ti serve una landing per una singola offerta o campagna",
++          "Vuoi qualcosa di semplice che puoi evolvere in futuro"
++        ],
++        "deliverablesTitle": "Cosa consegniamo in concreto",
++        "deliverables": [
++          "Landing page o mini-sito (fino a 3–4 pagine) in Next.js",
++          "Form contatto integrato con il tuo CRM o email",
++          "Tracciamento eventi principali (form, click telefono, WhatsApp)",
++          "Setup base di analytics / dashboard con i KPI principali",
++          "Mini guida per aggiornare testi e contenuti autonomamente"
++        ],
++        "case": {
++          "label": "Caso studio",
++          "title": "Studio dentistico di provincia",
++          "meta": "Sito locale, traffico da campagne Meta e ricerca organica",
++          "problemTitle": "Il problema",
++          "problem": "Lo studio aveva un sito vecchio in PHP, difficile da usare da mobile e senza tracciamento delle richieste. Le campagne portavano clic ma non era chiaro quante richieste reali arrivassero dal digitale.",
++          "solutionTitle": "La soluzione",
++          "solution": "Abbiamo progettato una nuova landing focalizzata sui servizi core, con form contatto chiaro, call-to-action per telefono e WhatsApp e integrazione con un semplice foglio di calcolo condiviso per tracciare ogni richiesta.",
++          "resultsTitle": "Risultati dopo 3 mesi",
++          "results": [
++            "+65% richieste da form rispetto al periodo precedente",
++            "40% delle richieste provenienti da mobile",
++            "Tempo medio sulla pagina principale passato da 25s a 1m05s",
++            "Lo studio ha iniziato a pianificare le campagne in base ai dati reali"
++          ]
++        },
++        "process": {
++          "title": "Come lavoriamo sulla presenza B2C",
++          "subtitle": "Un percorso veloce, guidato e con deliverable chiari già dalla prima settimana.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Discovery & obiettivi",
++              "description": "Capire il tuo servizio, il target e da dove arriva oggi il traffico per definire messaggio e struttura."
++            },
++            {
++              "title": "Wireframe e contenuti",
++              "description": "Impostiamo la struttura della pagina e ti aiutiamo a riorganizzare testi e call-to-action."
++            },
++            {
++              "title": "Implementazione e tracking",
++              "description": "Sviluppo in Next.js, setup del tracciamento e rilascio in produzione con breve walkthrough."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Domande frequenti sulla Presenza B2C",
++          "items": [
++            {
++              "q": "Possiamo usare il dominio che abbiamo già?",
++              "a": "Sì, possiamo collegare il nuovo sito o landing al dominio esistente e gestire il passaggio senza downtime."
++            },
++            {
++              "q": "Serve per forza un CRM?",
++              "a": "No, possiamo partire da una semplice integrazione via email o foglio di calcolo condiviso e introdurre un CRM solo se ha senso."
++            },
++            {
++              "q": "Quanto tempo serve per andare online?",
++              "a": "In media 2–4 settimane, a seconda di quanti contenuti devono essere creati da zero."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Vuoi capire se ti basta una landing?",
++          "subtitle": "Parliamo del tuo caso e ti diciamo se ha senso partire da una Presenza B2C o serve qualcosa di più strutturato.",
++          "button": "Prenota una call"
++        }
++      },
++
++      "poc": {
++        "hero": {
++          "badge": "Servizio · Headless PoC",
++          "title": "Headless PoC per migrare senza replatforming",
++          "subtitle": "Testiamo su una parte del tuo sito un frontend headless moderno, senza toccare tutto il monolite.",
++          "kpi1Label": "Miglioramento LCP",
++          "kpi1Value": "-2.1s",
++          "kpi1Note": "Riduzione media del Largest Contentful Paint su mobile",
++          "kpi2Label": "Uplift conversioni",
++          "kpi2Value": "+14%",
++          "kpi2Note": "Aumento medio sulla categoria testata",
++          "primaryCta": "Parla della tua PoC",
++          "secondaryCta": "Vedi come funziona in 5 giorni"
++        },
++        "whenTitle": "Quando ha senso una Headless PoC",
++        "when": [
++          "Hai un e-commerce o portale B2B lento ma non puoi rifare tutto da zero",
++          "Il team interno o l’IT sono scettici su un cambio di stack",
++          "Hai bisogno di numeri concreti prima di investire in una migrazione",
++          "Vuoi testare nuove UX solo su una categoria o sezione",
++          "Ti servono evidenze per portare un progetto in board"
++        ],
++        "deliverablesTitle": "Cosa consegniamo con la PoC",
++        "deliverables": [
++          "Micro-frontend PoC su una sezione o categoria chiave",
++          "Integrazione con le API esistenti (catalogo, pricing, auth dove necessario)",
++          "Setup di misurazione Core Web Vitals e conversioni",
++          "Report finale con confronto numerico tra versione attuale e PoC",
++          "Raccomandazione di roadmap per una migrazione graduale"
++        ],
++        "case": {
++          "label": "Caso studio",
++          "title": "E-commerce arredamento mid-size",
++          "meta": "1.500 SKU, stack legacy monolitico, forte traffico mobile",
++          "problemTitle": "Il problema",
++          "problem": "Le pagine categoria avevano LCP alto e layout instabile. Il team marketing era bloccato da tempi di sviluppo lunghi e il board non voleva approvare una replatforming completa.",
++          "solutionTitle": "La soluzione",
++          "solution": "Abbiamo costruito una PoC headless solo sulla categoria principale, mantenendo backend e logiche esistenti. Abbiamo confrontato il comportamento degli utenti tra versione legacy e nuova categoria headless.",
++          "resultsTitle": "Risultati PoC (2 settimane)",
++          "results": [
++            "LCP da 3.2s a 1.1s su mobile",
++            "CLS ridotto da 0.18 a 0.04",
++            "+14% conversion rate sulla categoria in test",
++            "-11% bounce rate sulle visite da mobile"
++          ]
++        },
++        "process": {
++          "title": "Come funziona la PoC in 5 giorni",
++          "subtitle": "Un percorso ultra focalizzato per avere numeri reali in tempi brevi.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Scoping",
++              "description": "Definiamo insieme la sezione da testare, i KPI e i vincoli tecnici partendo dallo stack esistente."
++            },
++            {
++              "title": "Implementazione PoC",
++              "description": "Sviluppo del frontend headless, integrazione con le API e setup di tracking e misurazioni."
++            },
++            {
++              "title": "Test & decisione",
++              "description": "Raccolta dati, confronto con la versione attuale e proposta di roadmap di migrazione."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Domande frequenti sulla PoC headless",
++          "items": [
++            {
++              "q": "La PoC può andare in produzione?",
++              "a": "Spesso sì: il codice è pensato per essere la base del rollout graduale. Valutiamo insieme cosa serve per renderla production-ready."
++            },
++            {
++              "q": "Serve cambiare anche il backend?",
++              "a": "No, la PoC lavora sulle API esistenti. Eventuali evoluzioni backend arrivano in un secondo momento, se hanno senso."
++            },
++            {
++              "q": "Quanto coinvolge il team interno?",
++              "a": "Teniamo il carico basso: ci servono soprattutto allineamento iniziale e accesso ai sistemi/API."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Vuoi numeri reali prima di migrare?",
++          "subtitle": "Possiamo disegnare una PoC su una sola categoria o funzionalità e misurare l’impatto prima di decidere.",
++          "button": "Raccontaci il tuo contesto"
++        }
++      },
++
++      "apps": {
++        "hero": {
++          "badge": "Servizio · Web app custom",
++          "title": "Web app B2B/B2C su misura, integrate nei tuoi sistemi",
++          "subtitle": "Portali clienti, dashboard interne e app multi-tenant costruite su stack moderno, API-first.",
++          "kpi1Label": "Ordini digitalizzati",
++          "kpi1Value": "70%",
++          "kpi1Note": "Quota ordini passati dal portale in 6 mesi",
++          "kpi2Label": "Tempo per ordine",
++          "kpi2Value": "-40%",
++          "kpi2Note": "Riduzione media sui processi manuali",
++          "primaryCta": "Parla del tuo caso",
++          "secondaryCta": "Vedi un esempio di portale"
++        },
++        "whenTitle": "Quando ha senso una web app custom",
++        "when": [
++          "Gestisci processi critici ancora via Excel, email o WhatsApp",
++          "Hai bisogno di un portale per clienti, partner o agenti",
++          "I software generici non si adattano bene alle tue regole di business",
++          "Ti serve un’app multi-tenant per servire più brand o clienti B2B",
++          "Vuoi integrare diversi sistemi (ERP, CRM, e-commerce) in un unico flusso"
++        ],
++        "deliverablesTitle": "Cosa consegniamo con una web app custom",
++        "deliverables": [
++          "Analisi dei processi e modellazione dei flussi principali",
++          "Design UX/UI adatto a utenti interni o B2B",
++          "Web app sviluppata su stack moderno (ad es. Next.js + NestJS / FastAPI)",
++          "Integrazione con sistemi esistenti tramite API/BFF",
++          "Dashboard base per monitorare uso e performance"
++        ],
++        "case": {
++          "label": "Caso studio",
++          "title": "Portale ordini per azienda food B2B",
++          "meta": "Rete di grossisti e agenti sul territorio nazionale",
++          "problemTitle": "Il problema",
++          "problem": "Ordini gestiti via telefono, email e messaggi, listini in Excel e nessuna visibilità centralizzata sul venduto. Molti errori di trascrizione e tempi lunghi per chiudere un ordine.",
++          "solutionTitle": "La soluzione",
++          "solution": "Abbiamo progettato un portale B2B dove agenti e clienti possono consultare listini personalizzati, inserire ordini e vedere lo stato delle consegne. Un layer API dialoga con il gestionale esistente.",
++          "resultsTitle": "Risultati dopo 6 mesi",
++          "results": [
++            "70% degli ordini passa attraverso il portale",
++            "Riduzione del 30% degli errori di inserimento",
++            "Tempo medio per ordine ridotto del 40%",
++            "Maggiore visibilità per il management su zone e performance"
++          ]
++        },
++        "process": {
++          "title": "Come progettiamo una web app custom",
++          "subtitle": "Partiamo dai processi reali e costruiamo solo ciò che serve davvero.",
++          "stepLabel": "Step {{index}}",
++          "steps": [
++            {
++              "title": "Workshop di processo",
++              "description": "Mappiamo flussi attuali, attori coinvolti e criticità per capire dove il software può dare più valore."
++            },
++            {
++              "title": "Prototipo cliccabile",
++              "description": "Creiamo un prototipo UX/UI per validare percorsi e schermate con gli utenti finali."
++            },
++            {
++              "title": "Implementazione e integrazione",
++              "description": "Sviluppo dell’app, collegamento ai sistemi esistenti e fase di test con un gruppo pilota."
++            }
++          ]
++        },
++        "faq": {
++          "title": "Domande frequenti sulle web app custom",
++          "items": [
++            {
++              "q": "Quanto è complesso gestire una web app custom nel tempo?",
++              "a": "Progettiamo l’architettura pensando alla manutenzione: documentazione chiara, separazione tra frontend e backend e possibilità di handover al tuo team o partner di fiducia."
++            },
++            {
++              "q": "Possiamo partire piccolo e allargare in seguito?",
++              "a": "Sì, spesso iniziamo con un singolo processo o gruppo di utenti e poi estendiamo la copertura in più release."
++            },
++            {
++              "q": "Supportate anche hosting e osservabilità?",
++              "a": "Possiamo aiutarti a scegliere infrastruttura e setup di logging/monitoring, oppure lavorare con il tuo team DevOps."
++            }
++          ]
++        },
++        "cta": {
++          "title": "Hai un processo che merita una web app?",
++          "subtitle": "Raccontaci come lavori oggi: possiamo disegnare insieme un MVP di applicazione custom e stimarne l’impatto.",
++          "button": "Discuti un MVP con noi"
++        }
++      }
+     }
+   },
+   "webAgency": {

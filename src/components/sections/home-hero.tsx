@@ -201,7 +201,7 @@ export function HomeHero() {
                 className="cursor-pointer bg-brand-orange text-slate-950 shadow-lg shadow-brand-orange/40 hover:bg-brand-orange/90"
               >
                 <Link
-                  href="https://calendly.com/m2poweri25/30min" // <-- metti il tuo link
+                  href="https://calendly.com/m2poweri25/30min"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -217,7 +217,7 @@ export function HomeHero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-brand-blue/50 text-brand-blue hover:bg-brand-blue/10 hover:text-slate-50"
+                className="border-brand-blue/40 bg-slate-900/60 text-brand-blue hover:bg-brand-blue/10 hover:text-slate-50"
               >
                 <Link href="/headless-poc">{t("home.hero.secondaryCta")}</Link>
               </Button>

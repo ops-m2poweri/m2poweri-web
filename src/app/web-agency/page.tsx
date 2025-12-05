@@ -8,8 +8,6 @@ import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Handshake, Rocket, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CALENDLY_URL = "https://calendly.com/m2poweri25/30min";
-
 const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -66,7 +64,14 @@ export default function WebAgencyPage() {
                 size="lg"
                 className="bg-brand-orange text-slate-950 hover:bg-brand-orange/90 shadow-lg shadow-brand-orange/40"
               >
-                <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+                <Link
+                  href={
+                    process.env.CALENDLY_URL ||
+                    "https://calendly.com/m2poweri25/30min"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {t("webAgency.hero.primaryCta")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -180,7 +185,14 @@ export default function WebAgencyPage() {
               size="lg"
               className="bg-brand-orange text-slate-950 hover:bg-brand-orange/90 shadow-md shadow-brand-orange/40"
             >
-              <Link href={CALENDLY_URL} target="_blank" rel="noreferrer">
+              <Link
+                href={
+                  process.env.CALENDLY_URL ||
+                  "https://calendly.com/m2poweri25/30min"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("webAgency.cta.primaryCta")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
